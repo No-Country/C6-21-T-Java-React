@@ -55,7 +55,6 @@ function Cart() {
         .finally(emptyCart)
         
     }
-    console.log(cart)
 
     return (
         loading ? 
