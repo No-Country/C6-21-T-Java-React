@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMountain } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faSlack } from '@fortawesome/free-brands-svg-icons';
+import './footer.css';
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
       <div className="footer__col1">
         <div className='hat-icon-footer'><FontAwesomeIcon icon={faMountain}></FontAwesomeIcon></div>
         <div className='description-footer'>
-          <h2>nombreProyecto</h2>
+          <h2>Andes</h2>
           <p>Proyecto cohorte 6 - No Country</p>
         </div>
       </div>
