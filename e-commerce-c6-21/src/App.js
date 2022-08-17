@@ -9,6 +9,7 @@ import ProductsListContainer from './components/ProductsListContainer/ProductsLi
 
 //views
 import Home from './views/Home/Home';
+import CartItem from './components/Cart/CartItem';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={ <Home/> }/>
         <Route exact path="/products" element={ <ProductsListContainer/> } />
-        <Route exact path="/product/:productId" element={ <ProductDetailContainer /> } />
+        <Route exact path="/product/:productId" element={<ProductDetailContainer />} />
+        <Route exact path="/cart" element={ <Cart/> } />
       </Routes>
     </BrowserRouter>
   );

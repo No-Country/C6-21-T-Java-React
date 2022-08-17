@@ -20,7 +20,8 @@ const Header = () => {
           <Nav.Link>CATEGORY TWO</Nav.Link>
         </Nav>
         <Navbar.Brand>
-          <CartWidget/>
+          <Nav.Link><Link to="/cart"><CartWidget/></Link></Nav.Link>
+          
         </Navbar.Brand>
       </Container>
     </Navbar>
