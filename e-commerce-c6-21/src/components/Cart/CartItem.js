@@ -21,19 +21,20 @@ function CartItem({imgUrl, id, title, price, qty, totalPrice, stock}) {
         
     return (
         
-        <div>
-            <div>
-                <div>
+        <div className='container-fluid'>
+            <div className='d-flex flex-row'>
+                <div className='p-2 bd-highlight'>
                     <img src={imgUrl} alt=""
                     />
                 </div>
-            </div>
             <div>
             <h1>{title}</h1>
             <ItemCount initial={qty} stock={stock} onChange={onChange}/>
             </div>
+            <p> ${price}</p>
             <p> ${totalPrice}</p>
             <button onClick = {deleteI}>x</button>
+            </div>
 
         </div>    
         

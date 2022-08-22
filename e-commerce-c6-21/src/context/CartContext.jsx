@@ -10,10 +10,11 @@ export const useCartContext = () => useContext(CartContext)
 function ContextProvider({children}) {
 
 //funcion para agregar items al cart
-    const [cart, setCart] = useState([]) 
+    const [cart, setCart] = useState([{name:"remera", id:1, photo:"https://picsum.photos/100/200", price:300, qty:1, totalprice:300, stock:1000 },{name:"pantalon", id:2, photo:"https://picsum.photos/100/200", price:500, qty:2, totalprice:1000, stock:1000 } ]) 
     let cartProductAux = []  
-    const [FinalPrice, setFinalPrice] = useState(0)
+    const [FinalPrice, setFinalPrice] = useState(1300)
     const [TotalQty, setTotalQty] = useState(0)
+
     function changeState(cart, prodQty, totalQty) {
         setCart (cart)
         setFinalPrice (prodQty)
