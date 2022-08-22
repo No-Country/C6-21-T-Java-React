@@ -4,12 +4,14 @@ import NavbarComponent from './components/Header/Navbar';
 import Footer from './components/Footer/Footer';
 import Home from './components/home/Home';
 import Cart from './components/Cart/Cart';
+import ContextProvider from './context/CartContext.jsx';
 
 //components
 
 
 function App() {
   return (
+    <ContextProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<NavbarComponent />}>
@@ -22,6 +24,7 @@ function App() {
       </Routes>
       <Footer />
     </BrowserRouter>
+    </ContextProvider>
   );
 }
 
