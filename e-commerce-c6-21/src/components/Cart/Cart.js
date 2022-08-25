@@ -70,7 +70,7 @@ function Cart() {
                             <span> 
                             total: $ {FinalPrice}
                             </span>
-                            <button onClick={emptyCart}> VACIAR CARRITO </button>
+                            <button className='btn btn-dark' onClick={emptyCart}> VACIAR CARRITO </button>
                         </div>
                     <Form user={user} GenerateBuyOrder={GenerateBuyOrder} handleChange={handleChange} handleSubmit={handleSubmit} />
                 </div>
@@ -78,7 +78,7 @@ function Cart() {
             <div > 
                 <h1>El carrito esta vacio</h1>
                     
-                    <button>Ir a comprar</button>
+                    <button className='btn btn-dark'>Ir a comprar</button>
                     
             </div>
         

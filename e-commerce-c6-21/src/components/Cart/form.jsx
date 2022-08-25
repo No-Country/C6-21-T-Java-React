@@ -34,7 +34,7 @@ function Form({ handleSubmit, handleChange, GenerateBuyOrder, user }) {
             <input
                 type="text" autoComplete="off" name="phoneNumber" onChange={handleChange}>
             </input>
-            <button id="submit"  className={!user.fullName || validation(user.email) ||!user.email || !user.phoneNumber || !(user.email === user.emailValidation) ? 'disabled' : 'enabled'} disabled={!user.fullName|| !(user.email===user.emailValidation)|| validation(user.email) || !user.phoneNumber} onClick={GenerateBuyOrder}>
+            <button id="submit"  className={!user.fullName || validation(user.email) ||!user.email || !user.phoneNumber || !(user.email === user.emailValidation) ? 'btn btn-secondary' : 'btn btn-dark'} disabled={!user.fullName|| !(user.email===user.emailValidation)|| validation(user.email) || !user.phoneNumber} onClick={GenerateBuyOrder}>
                 FINALIZAR COMPRA
             </button>
         </form>

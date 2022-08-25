@@ -1,12 +1,12 @@
 footer {
-	padding-top: 5rem;
+	padding-top: 2rem;
 	background-color: #282c34;
 	color: white;
 	display: flex;
 	flex-direction: row;
 	gap: 3rem;
 	width: 100%;
-	position: absolute;
+	position: relative;
 	bottom: 0;
 }
 
@@ -57,7 +57,7 @@ footer {
 		flex-direction: column;
 		gap: 3rem;
 		width: 100%;
-		position: absolute;
+		position: relative;
 		bottom: 0;
 	}
 

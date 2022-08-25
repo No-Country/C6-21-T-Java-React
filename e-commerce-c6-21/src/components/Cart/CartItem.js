@@ -22,18 +22,25 @@ function CartItem({imgUrl, id, title, price, qty, totalPrice, stock}) {
     return (
         
         <div className='container-fluid'>
-            <div className='d-flex flex-row'>
-                <div className='p-2 bd-highlight'>
-                    <img src={imgUrl} alt=""
+            <div className=' card m-4 d-flex flex-row justify-content-between'>
+                <div className='p-4'>
+                    <img className='card-img' src={imgUrl} alt=""
                     />
                 </div>
-            <div>
-            <h1>{title}</h1>
+            <div className='d-flex flex-column a justify-content-center'>
+            <h1 className='py-4' >{title}</h1>
+            <span className='d-flex align-items-center'>
+            </span>
             <ItemCount initial={qty} stock={stock} onChange={onChange}/>
             </div>
-            <p> ${price}</p>
-            <p> ${totalPrice}</p>
-            <button onClick = {deleteI}>x</button>
+            <span className='d-flex flex-column justify-content-center align-items-center'>
+                <div className='card p-4 justify-content-center align-items-center'>
+                    <p> precio total </p>
+                    <p >${totalPrice}</p>
+                </div>
+            
+            </span>
+            <button className='btn btn-dark p-4 m-4 ' onClick = {deleteI}>x</button>
             </div>
 
         </div>    
