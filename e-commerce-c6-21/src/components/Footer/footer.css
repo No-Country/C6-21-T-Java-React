@@ -1,13 +1,12 @@
 footer {
-	padding-top: 5rem;
+	width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: auto;
+  font-size: 12px;
 	background-color: #282c34;
 	color: white;
-	display: flex;
-	flex-direction: row;
-	gap: 3rem;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
 }
 
 .hat-icon-footer {
@@ -48,17 +47,16 @@ footer {
 
 @media (max-width: 800px) {
 	footer {
-		padding-top: 5rem;
+		width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: auto;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 12px;
 		background-color: #282c34;
 		color: white;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		gap: 3rem;
-		width: 100%;
-		position: absolute;
-		bottom: 0;
+		
 	}
 
 	.footer__col1 {
