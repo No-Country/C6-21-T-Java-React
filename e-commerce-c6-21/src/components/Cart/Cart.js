@@ -1,4 +1,5 @@
 import {React, useState} from 'react'
+import { useCartContext } from '../../context/CartContext'
 
 
 import CartItem from './CartItem'
@@ -11,14 +12,10 @@ function Cart() {
   //Cuando incorporemos db el estado de loading deberia ser false para que aparezca el cartelito mientras carga
     
 
-    //const { cart, emptyCart, FinalPrice } = useCartContext()
+    const { cart, emptyCart, FinalPrice } = useCartContext()
     //Hay qe implementar context, y crear las funciones para vaciar el carrito y obtener precio total
 
-    const cart = [{name:"remera", photo:"https://picsum.photos/100/200", price:300, qty:1, totalprice:300, stock:1000 },{name:"pantalon", photo:"https://picsum.photos/100/200", price:500, qty:2, totalprice:1000, stock:1000 }]
-    const FinalPrice = 100
-    function emptyCart() {
-        
-    }
+   
 
     const [orderSent, setOrderSent] = useState(false);
     const [user, setUser] = useState({ fullName: false , email: false ,emailValidation:false, phoneNumber: false, password: false })
