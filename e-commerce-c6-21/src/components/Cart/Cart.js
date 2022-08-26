@@ -54,23 +54,26 @@ function Cart() {
     }
 
     return (
+        
         loading ? 
-            <h1>Loading</h1>
+            <div className='card m-4 p-4'>
+                <h1>Loading</h1>
+            </div>
             :
             orderSent ?
-                <div>
+                <div  className='card m-4 p-4' >
                     <h1>Gracias por tu compra {user.fullName}.<br/> El id de tu pedidos es {orderSent}.<br/> Te estaremos enviando la facturacion a {user.email} </h1>
                 </div>
         :
                 (cart.length > 0) ? 
                 
-                <div >
+                <div  className='card  m-4 p-4' >
                         {cart.map((prod) => <CartItem key={prod.id} id={prod.id} title={prod.name} imgUrl={prod.photo} price={prod.price} qty={prod.qty} totalPrice={prod.totalprice} stock={prod.stock}/>)}
-                        <div >
-                            <span> 
+                        <div className='d-flex flex-column justify-content-center' >
+                            <span className=' p-5 text-center'> 
                             total: $ {FinalPrice}
                             </span>
-                            <button className='btn btn-dark' onClick={emptyCart}> VACIAR CARRITO </button>
+                            <button className=' m-5 btn btn-sm btn-dark' onClick={emptyCart}> VACIAR CARRITO </button>
                         </div>
                     <Form user={user} GenerateBuyOrder={GenerateBuyOrder} handleChange={handleChange} handleSubmit={handleSubmit} />
                 </div>
