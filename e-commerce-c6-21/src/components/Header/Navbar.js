@@ -16,7 +16,7 @@ function NavbarComponent() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
               <Nav.Link href='productos'>Productos</Nav.Link>
-              <Nav.Link href='/cart'>Carrito</Nav.Link>
+              <Nav.Link href='cart'>Carrito</Nav.Link>
               <Nav.Link href='vista3'>vista3</Nav.Link>
           </Nav>
           </Navbar.Collapse>

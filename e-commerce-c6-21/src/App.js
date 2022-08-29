@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<NavbarComponent />}>
           <Route index element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="cart" element={<Cart />} />
           <Route path="productos" element={<Product />} />
           <Route path="vista2" element={<vista2 />} />
           <Route path="vista3" element={<vista3 />} />
