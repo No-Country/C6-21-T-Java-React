@@ -4,6 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMountain } from '@fortawesome/free-solid-svg-icons';
 import './navbar.css'
+import CartWidget from '../CartWidget/CartWidget';
 
 function NavbarComponent() {
   return (
@@ -15,9 +16,9 @@ function NavbarComponent() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
-              <Nav.Link> <Link to="/cart">vista1</Link></Nav.Link>
               <Nav.Link href='vista2'>vista2</Nav.Link>
               <Nav.Link href='vista3'>vista3</Nav.Link>
+              <Nav.Link> <Link to="/cart"><CartWidget/></Link></Nav.Link>
           </Nav>
           </Navbar.Collapse>
           
