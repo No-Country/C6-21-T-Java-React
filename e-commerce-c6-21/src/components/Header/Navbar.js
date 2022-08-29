@@ -15,8 +15,8 @@ function NavbarComponent() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
-              <Nav.Link> <Link to="/cart">vista1</Link></Nav.Link>
-              <Nav.Link href='vista2'>vista2</Nav.Link>
+              <Nav.Link href='/Product'>Productos</Nav.Link>
+              <Nav.Link href='/cart'>Carrito</Nav.Link>
               <Nav.Link href='vista3'>vista3</Nav.Link>
           </Nav>
           </Navbar.Collapse>
