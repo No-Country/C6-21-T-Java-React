@@ -70,10 +70,10 @@ function Cart() {
                 <div  className='card  m-4 p-4' >
                         {cart.map((prod) => <CartItem key={prod.id} id={prod.id} title={prod.name} imgUrl={prod.photo} price={prod.price} qty={prod.qty} totalPrice={prod.totalprice} stock={prod.stock}/>)}
                         <div className='d-flex flex-column justify-content-center' >
-                            <span className=' p-5 text-center'> 
+                            <span className='p-5 text-center align-self-end'> 
                             total: $ {FinalPrice}
+                            <button className=' m-5 btn btn-dark w-50 align-self-end' onClick={emptyCart}> VACIAR CARRITO </button>
                             </span>
-                            <button className=' m-5 btn btn-sm btn-dark' onClick={emptyCart}> VACIAR CARRITO </button>
                         </div>
                     <Form user={user} GenerateBuyOrder={GenerateBuyOrder} handleChange={handleChange} handleSubmit={handleSubmit} />
                 </div>
@@ -81,7 +81,8 @@ function Cart() {
             <div > 
                 <h1>El carrito esta vacio</h1>
                     
-                    <button className='btn btn-dark'>Ir a comprar</button>
+                        <button className='btn btn-dark '>Ir a comprar</button>
+                    
                     
             </div>
         

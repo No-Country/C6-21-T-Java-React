@@ -32,8 +32,8 @@ function ItemCount({stock, initial, onAdd, id, onChange}) {
         return (
 
 
-            <div>
-                <div className='d-flex justify-content-around' >
+            <div >
+                <div className='d-flex  w-50' >
                     <span className='col btn btn-dark'  onClick={decrease} > - </span>
                     <input className='col form-control text-center ' id='inputNum'  type="text"  max={stock} min='1' readOnly value={number}/>
                     <span className='col btn btn-dark'   onClick={increase}> + </span>
