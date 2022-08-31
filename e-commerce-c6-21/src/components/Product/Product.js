@@ -8,6 +8,16 @@ const Imagen = styled.img`
   width: 12rem;
 `;
 
+const ProductCard = styled.li`
+  padding: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items-center';
+  margin: 1rem;
+  border-style: 5px solid;
+  border-color: red;
+`
+
 const Product = () => {
 
   const [loading3, setloading3] = useState(true)
@@ -32,7 +42,7 @@ console.log(products)
       <h1>Loading</h1>
       :
       products.map((item, index) => (
-    <li>
+    <ProductCard>
       <div>
         <div>
           <Imagen src={item.image} alt='imagen'/>
@@ -48,7 +58,7 @@ console.log(products)
       <div>
 
       </div>
-    </li>
+    </ProductCard>
       ))
     }
     </section>
