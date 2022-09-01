@@ -6,6 +6,10 @@ import Home from './components/home/Home';
 import Cart from './components/Cart/Cart';
 import ContextProvider from './context/CartContext.jsx';
 import Product from './components/Product/Product';
+import Buzos from './components/ProductDetail/Buzos';
+import Camisas from './components/ProductDetail/Camisas';
+import Remeras from './components/ProductDetail/Remeras';
+import Jeans from './components/ProductDetail/Jeans';
 
 //components
 
@@ -19,6 +23,10 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/cart" element={<Cart />}></Route>
           <Route path="productos" element={<Product />} />
+          <Route path="buzos" element={<Buzos />} />
+          <Route path="camisas" element={<Camisas />} />
+          <Route path="remeras" element={<Remeras />} />
+          <Route path="jeans" element={<Jeans />} />
         </Route>
       </Routes>
       <Footer />
