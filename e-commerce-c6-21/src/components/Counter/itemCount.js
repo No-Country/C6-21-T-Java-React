@@ -32,11 +32,11 @@ function ItemCount({stock, initial, onAdd, id, onChange}) {
         return (
 
 
-            <div>
-                <div className='d-flex justify-content-around' >
-                    <span className='col btn btn-dark'  onClick={decrease} > - </span>
+            <div className=''>
+                <div className='d-flex my-auto w-50 mx-auto' >
+                    <span className='col btn btn-white'  onClick={decrease} > - </span>
                     <input className='col form-control text-center ' id='inputNum'  type="text"  max={stock} min='1' readOnly value={number}/>
-                    <span className='col btn btn-dark'   onClick={increase}> + </span>
+                    <span className='col btn btn-white'   onClick={increase}> + </span>
                 </div>
                 {
                     onAdd ?

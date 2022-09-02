@@ -1,4 +1,5 @@
 import {React, useState} from 'react'
+import { Link } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext'
 
 
@@ -67,21 +68,22 @@ function Cart() {
         :
                 (cart.length > 0) ? 
                 
-                <div  className='card  m-4 p-4' >
+                <div  className='container-fluid my-2 mx-1 p-2' >
                         {cart.map((prod) => <CartItem key={prod.id} id={prod.id} title={prod.name} imgUrl={prod.photo} price={prod.price} qty={prod.qty} totalPrice={prod.totalprice} stock={prod.stock}/>)}
                         <div className='d-flex flex-column justify-content-center' >
-                            <span className=' p-5 text-center'> 
-                            total: $ {FinalPrice}
+                            <span className='p-5 text-center align-self-end fw-bold fs-5'> 
+                            Total: $ {FinalPrice}
+                            <button className=' m-5 btn btn-dark w-50 align-self-end fw-bold' onClick={emptyCart}> VACIAR CARRITO </button>
                             </span>
-                            <button className=' m-5 btn btn-sm btn-dark' onClick={emptyCart}> VACIAR CARRITO </button>
                         </div>
                     <Form user={user} GenerateBuyOrder={GenerateBuyOrder} handleChange={handleChange} handleSubmit={handleSubmit} />
                 </div>
         : 
-            <div > 
-                <h1>El carrito esta vacio</h1>
+            <div className='container d-flex flex-column justify-content-center m-5 p-5' > 
+                <h1 className='text-center'>El carrito esta vacío</h1>        
+                 <Link className='btn btn-dark align-self-center' to={`/`}>Ir a comprar</Link>
                     
-                    <button className='btn btn-dark'>Ir a comprar</button>
+                    
                     
             </div>
         
