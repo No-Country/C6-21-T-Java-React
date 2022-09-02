@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer__col1">
         <div className='hat-icon-footer'><FontAwesomeIcon icon={faMountain}></FontAwesomeIcon></div>
         <div className='description-footer'>
-          <h2>Andes</h2>
+          <h2>Ariaka</h2>
           <p>Proyecto cohorte 6 - No Country</p>
         </div>
       </div>
