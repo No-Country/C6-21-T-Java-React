@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import styled from '@emotion/styled';
 import Button from 'react-bootstrap/Button';
+import './products.css'
 
 const Imagen = styled.img`
   width: 12rem;
@@ -42,20 +43,16 @@ const Buzos = () => {
           :          
           buzos.filter(buzos => buzos.category === 'buzos').map((item, index) => (
         <BuzosCard>
-          <div>
-            <div>
-              <Imagen src={item.image} alt='imagen'/>
-            </div>
-            <div>
-              <h1>{item.name}</h1>
-              <p>{item.description}</p>
-            </div>
-            <div>
-              <div>{item.price}</div><div><Button variant="light">Añadir al carro</Button>{' '}</div>
+          <div className='wrapper_products'>
+          <div className='card_products'>
+              <Imagen src={item.image} alt='imagen' className='card_image'/>
+            <div className='card_body'>
+              <h1 className='card_title'>{item.name}</h1>
+              <p className='card_description'>{item.description}</p>
+             <h3 className='card_price'>${item.price}</h3>
+             <Button variant="light" className='card_btn'>Añadir al carro</Button>
             </div>
           </div>
-          <div>
-    
           </div>
         </BuzosCard>
           ))

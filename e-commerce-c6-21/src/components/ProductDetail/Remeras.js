@@ -51,11 +51,8 @@ const Remeras = () => {
               <p>{item.description}</p>
             </div>
             <div>
-              <div>{item.price}</div><div><Button variant="light">Añadir al carro</Button>{' '}</div>
+              <div>${item.price}</div><div><Button variant="light">Añadir al carro</Button>{' '}</div>
             </div>
-          </div>
-          <div>
-    
           </div>
         </RemerasCard>
           ))
