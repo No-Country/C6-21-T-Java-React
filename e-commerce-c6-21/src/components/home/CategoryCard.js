@@ -48,7 +48,7 @@ function CategoryCard({category, img1, img2, img3, img4}) {
             <Card.Body className='text-center'>
                 <Card.Title className='card-title'>{category}</Card.Title>
                 <Card.Text>Click para ver nuestros {category}</Card.Text>
-                <Link className='btn btn-dark' to={`/products/${category}`}>Ir a ver</Link>
+                <Link className='btn btn-dark' to={`/${category}`}>Ir a ver</Link>
             </Card.Body>
 
         </Card>

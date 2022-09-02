@@ -5,6 +5,11 @@ import Footer from './components/Footer/Footer';
 import Home from './components/home/Home';
 import Cart from './components/Cart/Cart';
 import ContextProvider from './context/CartContext.jsx';
+import Product from './components/Product/Product';
+import Buzos from './components/ProductDetail/Buzos';
+import Camisas from './components/ProductDetail/Camisas';
+import Remeras from './components/ProductDetail/Remeras';
+import Jeans from './components/ProductDetail/Jeans';
 
 //components
 
@@ -17,10 +22,11 @@ function App() {
         <Route path="/" element={<NavbarComponent />}>
           <Route index element={<Home />} />
           <Route path="/cart" element={<Cart />}></Route>
-          
-          {/* <Route path="vista1" element={<'vista1' />} />
-          <Route path="vista2" element={<'vista2' />} />
-          <Route path="vista3" element={<'vista3' />} /> */}
+          <Route path="productos" element={<Product />} />
+          <Route path="buzos" element={<Buzos />} />
+          <Route path="camisas" element={<Camisas />} />
+          <Route path="remeras" element={<Remeras />} />
+          <Route path="jeans" element={<Jeans />} />
         </Route>
       </Routes>
       <Footer />

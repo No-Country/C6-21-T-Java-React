@@ -1,0 +1,47 @@
+.wrapper_products{
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+.card_products{
+    box-shadow: 0 0 10px 5px #4f546c;
+    border-radius: 0.2rem;
+    display: flex;    
+}
+
+.card_image{
+    width: 14rem;
+    height: 11rem;
+    object-fit: cover;
+}
+
+.card_body{
+    margin: 1rem;
+}
+
+.card_title{
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.card_description{
+    line-height: 1.2rem;
+}
+
+.card_price{
+    font-size: 1.4rem;
+    margin-top: 0.6rem;
+}
+
+.card_btn{
+    border: 1px solid #4f546c;
+    font-size: 1rem;
+}
+
+@media screen and (min-with: 600px){
+    .wrapper_products{
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
+    }
+}
