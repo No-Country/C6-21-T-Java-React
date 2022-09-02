@@ -13,6 +13,16 @@ const Home = () => {
   const [loading2, setloading2] = useState(true)
   const [Images, setImages] = useState([])
   const [BrandImages, setBrandImages] = useState([])
+  
+  function setFalse(n){
+    setTimeout(() => {
+      if (n === 1) {
+        setloading1(false)
+      }else{
+        setloading2(false)
+      }
+    }, 1500);
+  }
 
   useEffect(()=>{
     setloading1(true)
@@ -22,9 +32,8 @@ const Home = () => {
     getDocs(qryCollection)
     .then (resp => setBrandImages(resp.docs.map( item => ({id: item.id, ...item.data()}))))
     .catch((err)=>console.log(err))
-    .finally(setloading1(false))
+    .finally(setFalse(1))
 },[])
-
   useEffect(()=>{
         setloading2(true)
         const db = getFirestore()
@@ -33,16 +42,16 @@ const Home = () => {
         getDocs(qryCollection)
         .then (resp => setImages(resp.docs.map( item => ({id: item.id, ...item.data()}))))
         .catch((err)=>console.log(err))
-        .finally(setloading2(false))
+        .finally(setFalse(2))
     },[])
  console.log(BrandImages)
   return (
+    
+       (loading1||loading2) ? 
+        <div>
+          <h1 className='ts-1 bg-red'>loading...</h1>
+        </div>
 
-
-    <section>
-      { (loading1||loading2) ? 
-
-        <h1>loading</h1>
           :
           <div>
         <BrandSlider BrandImages={BrandImages} />
@@ -54,9 +63,7 @@ const Home = () => {
           </CardGroup>
         </div>
           </div>
-    }
-      </section>
-
+    
   )
 }
 

@@ -1,4 +1,5 @@
 import {React, useState} from 'react'
+import { Link } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext'
 
 
@@ -80,7 +81,7 @@ function Cart() {
         : 
             <div className='container d-flex flex-column justify-content-center m-5 p-5' > 
                 <h1 className='text-center'>El carrito esta vacío</h1>        
-                 <button type='button' className='btn btn-dark align-self-center'>Ir a comprar</button>
+                 <Link className='btn btn-dark align-self-center' to={`/`}>Ir a comprar</Link>
                     
                     
                     
