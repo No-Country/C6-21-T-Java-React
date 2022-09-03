@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import Button from 'react-bootstrap/Button';
 import { useCartContext } from '../../context/CartContext'
 import './products.css'
-import cartModification from '../../context/CartContext';
+const {cartModification} = useCartContext();
 
 
 const BuzosCard = styled.li`
