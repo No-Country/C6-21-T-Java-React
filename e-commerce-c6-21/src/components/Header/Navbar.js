@@ -24,8 +24,8 @@ function NavbarComponent() {
               <NavDropdown.Item href='remeras'>remeras</NavDropdown.Item>
               <NavDropdown.Item href='jeans'>jeans</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href='nosotros'>nos</Nav.Link>
-              <Nav.Link href='contacto'>contacto</Nav.Link>
+              {/* <Nav.Link href='nosotros'>nos</Nav.Link>
+              <Nav.Link href='contacto'>contacto</Nav.Link> */}
               <Nav.Link> <Link to="/cart"><CartWidget/></Link></Nav.Link>
           </Nav>
           </Navbar.Collapse>

@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import styled from '@emotion/styled';
 import Button from 'react-bootstrap/Button';
+import { useCartContext } from '../../context/CartContext'
 import './products.css'
+const {cartModification} = useCartContext();
 
-const Imagen = styled.img`
-  width: 12rem;
-`;
 
 const BuzosCard = styled.li`
   padding: 4rem;
@@ -40,20 +39,29 @@ const Buzos = () => {
           {(loading4) ?
     
           <h1>Loading</h1>
-          :          
+          :       
+          
           buzos.filter(buzos => buzos.category === 'buzos').map((item, index) => (
         <BuzosCard>
-          <div className='wrapper_products'>
-          <div className='card_products'>
-              <Imagen src={item.image} alt='imagen' className='card_image'/>
-            <div className='card_body'>
-              <h1 className='card_title'>{item.name}</h1>
-              <p className='card_description'>{item.description}</p>
-             <h3 className='card_price'>${item.price}</h3>
-             <Button variant="light" className='card_btn'>Añadir al carro</Button>
-            </div>
-          </div>
-          </div>
+          <div class="card mb-3" style={{maxWidth:'540px'}}>
+  <div class="row g-0">
+    <div class="col-md-4">
+    <img src={item.image} class="img-fluid rounded-start" alt="imagen_producto"/>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{item.name}</h5>
+        <p class="card-text">{item.description}</p>
+        <p class="card-text"><small class="text-muted">${item.price}</small></p>
+      </div>
+      <div>
+      <Button variant="light" className='card_btn' onClick={function onChange(n) {
+        cartModification(item.id,item.name,item.image,item.price,1, 100)
+    }}>Añadir al carro</Button>
+      </div>
+    </div>
+  </div>
+</div>
         </BuzosCard>
           ))
         }
